@@ -1,0 +1,44 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  margin-top: 25px;
+}
+
+h3 {
+  color: #444;
+}
+
+input {
+  padding: 9px;
+  margin-right: 5px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+button {
+  padding: 9px 13px;
+  margin: 5px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+li {
+  margin: 8px 0;
+}
