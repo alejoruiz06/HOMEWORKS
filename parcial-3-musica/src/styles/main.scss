@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+$bg: #101110;
+$panel: #191c19;
+$muted: #9a9f98;
+$green: #b7f36b;
+$text: #f3f5ef;
+
+* { box-sizing: border-box; }
+body { margin: 0; background: $bg; color: $text; font-family: 'DM Sans', sans-serif; }
+button, input { font: inherit; }
+.app-shell { min-height: 100vh; display: flex; }
+.sidebar { width: 245px; min-height: 100vh; padding: 30px 22px; background: #151815; border-right: 1px solid #292d28; display: flex; flex-direction: column; flex-shrink: 0; }
+.brand { display: flex; align-items: center; gap: 11px; font: 700 25px 'Space Grotesk'; letter-spacing: -1px; margin-bottom: 65px; }
+.brand-mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 11px; background: $green; color: #17200f; }
+.sidebar-label, .eyebrow { color: $muted; font-size: 10px; font-weight: 700; letter-spacing: 1.7px; }
+.side-link { display: flex; gap: 13px; align-items: center; padding: 13px 12px; color: #aeb3ab; border-radius: 9px; margin-top: 9px; font-size: 13px; }
+.side-link.active { background: #272e23; color: $green; }
+.sidebar-note { margin-top: auto; background: #20271c; border: 1px solid #34402b; border-radius: 13px; padding: 17px; color: $green; }
+.sidebar-note strong { display: block; margin-top: 12px; color: $text; font-size: 13px; }
+.sidebar-note p { color: #aab2a2; font-size: 11px; line-height: 1.6; margin-bottom: 0; }
+.sidebar-footer { color: #666d63; font-size: 9px; letter-spacing: 1px; margin-top: 25px; }
+.content { flex: 1; max-width: 1500px; padding: 0 46px 24px; margin: 0 auto; }
+.topbar { height: 76px; border-bottom: 1px solid #292d28; display: flex; align-items: center; gap: 9px; color: $muted; font-size: 10px; letter-spacing: 1.3px; }
+.topbar .status-dot { width: 7px; height: 7px; border-radius: 50%; background: $green; margin-left: auto; }
+.topbar .status-dot + * { color: #c4c9c0; font-size: 11px; letter-spacing: 0; }
+.hero { min-height: 345px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #292d28; overflow: hidden; }
+.hero-copy { padding: 35px 0; width: 62%; }
+h1 { font: 600 clamp(37px, 4vw, 57px)/1.05 'Space Grotesk'; letter-spacing: -2.8px; margin: 17px 0 13px; }
+h1 em { color: $green; font-style: normal; }
+.hero-copy > p { color: $muted; font-size: 13px; }
+.search-section { position: relative; max-width: 480px; margin-top: 25px; }
+.search-box { display: flex; align-items: center; gap: 12px; background: #202420; border: 1px solid #3b4338; border-radius: 9px; padding: 0 15px; height: 48px; color: $green; }
+.search-box input { background: transparent; border: 0; outline: 0; color: $text; width: 100%; font-size: 13px; }
+.search-box input::placeholder { color: #81877e; }
+.suggestions { position: absolute; z-index: 5; top: 55px; width: 100%; padding: 7px; background: #242924; border: 1px solid #3b4338; border-radius: 9px; box-shadow: 0 15px 35px #0009; }
+.suggestions button { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; color: $text; border: 0; background: transparent; padding: 10px; border-radius: 6px; cursor: pointer; }
+.suggestions button:hover { background: #343d30; }
+.suggestions button > span:first-child { font-size: 22px; }
+.suggestions strong, .suggestions small { display: block; }
+.suggestions strong { font-size: 12px; }
+.suggestions small { color: $muted; font-size: 10px; margin-top: 3px; }
+.suggestions p { color: $muted; padding: 8px; font-size: 12px; }
+.search-feedback { color: $green !important; font-size: 11px !important; margin-top: 9px !important; }
+.hero-art { width: 34%; display: grid; place-items: center; position: relative; min-height: 290px; }
+.vinyl { width: 230px; height: 230px; border-radius: 50%; background: repeating-radial-gradient(circle, #252a25 0 4px, #101310 5px 8px); display: grid; place-items: center; box-shadow: 0 0 75px #b7f36b18; transform: rotate(-18deg); }
+.vinyl-center { width: 75px; height: 75px; border-radius: 50%; display: grid; place-items: center; background: $green; color: #182012; font-size: 38px; }
+.floating-note { position: absolute; color: $green; font-size: 36px; }
+.note-one { top: 35px; right: 30px; }.note-two { bottom: 30px; left: 30px; }
+.dashboard-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; margin-top: 27px; }
+.panel { background: $panel; border: 1px solid #2b302a; border-radius: 13px; padding: 22px; min-width: 0; }
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+h2 { font: 600 21px 'Space Grotesk'; margin: 5px 0 0; letter-spacing: -.5px; }
+.heading-icon { width: 38px; height: 38px; display: grid; place-items: center; background: #2b3525; color: $green; border-radius: 10px; }
+.song-row { display: flex; align-items: center; gap: 13px; padding: 11px 0; border-top: 1px solid #2a2f29; }
+.position { color: #788071; font: 600 12px 'Space Grotesk'; width: 19px; }
+.cover { width: 37px; height: 37px; border-radius: 8px; display: grid; place-items: center; background: #2b302a; font-size: 20px; }
+.song-info { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.song-info strong { font-size: 12px; font-weight: 600; }
+.song-info small { color: $muted; font-size: 10px; }
+.plays { margin-left: auto; color: #8d9588; font-size: 10px; white-space: nowrap; }
+.recommendation-subtitle { color: $muted; font-size: 11px; line-height: 1.5; margin: -5px 0 18px; }
+.related-list button { display: flex; justify-content: space-between; width: 100%; padding: 14px 0; border: 0; border-top: 1px solid #2a2f29; color: $text; background: transparent; text-align: left; font-size: 12px; cursor: pointer; }
+.related-list button span { color: $green; font-size: 10px; }
+.empty-state { border: 1px dashed #3b4338; color: $muted; border-radius: 8px; padding: 25px 12px; text-align: center; font-size: 11px; }
+.page-footer { text-align: center; color: #697064; font-size: 10px; padding: 24px 0 5px; }
+@media (max-width: 900px) { .sidebar { width: 195px; } .content { padding: 0 25px 20px; } .dashboard-grid { grid-template-columns: 1fr; } }
+@media (max-width: 650px) { .sidebar { display: none; } .content { padding: 0 17px 20px; } .hero { min-height: auto; } .hero-copy { width: 100%; } .hero-art { display: none; } h1 { font-size: 42px; } .plays { display: none; } }
